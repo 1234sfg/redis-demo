@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.leaf.mapper.TInfoMapper">
+    <insert id="saveTInfo" parameterType="com.leaf.model.TInfo">
+        insert into t_info(username,password,sex,tel)values(#{username},#{password},#{sex},#{tel})
+    </insert>
+    <delete id="deleteTInfo" parameterType="java.lang.Integer">
+        delete from t_info where id=#{id}
+    </delete>
+    <update id="updateTInfo" parameterType="com.leaf.model.TInfo">
+        update t_info set username=#{username},password=#{password},sex=#{sex},tel=#{tel} where id=#{id}
+    </update>
+    <select id="getTInfoList" parameterType="com.leaf.model.TInfo" resultType="com.leaf.model.TInfo">
+        select * from  t_info
+    </select>
+    <select id="getTInfoPage" parameterType="java.lang.String" resultType="map">
+        select * from t_info
+    </select>
+</mapper>

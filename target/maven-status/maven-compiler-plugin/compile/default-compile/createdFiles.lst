@@ -1,0 +1,6 @@
+com\leaf\RedisDemoApplication.class
+com\leaf\service\impl\TInfoServiceImpl.class
+com\leaf\service\TInfoService.class
+com\leaf\controller\TInfoController.class
+com\leaf\model\TInfo.class
+com\leaf\mapper\TInfoMapper.class
